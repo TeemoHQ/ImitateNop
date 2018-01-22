@@ -1,0 +1,7 @@
+G:\NopCommerce\Test.Core\Presentation\Test.Web.Framework\bin\Debug\netcoreapp2.0\Test.Web.Framework.deps.json
+G:\NopCommerce\Test.Core\Presentation\Test.Web.Framework\bin\Debug\netcoreapp2.0\Test.Web.Framework.dll
+G:\NopCommerce\Test.Core\Presentation\Test.Web.Framework\obj\Debug\netcoreapp2.0\Test.Web.Framework.csprojResolveAssemblyReference.cache
+G:\NopCommerce\Test.Core\Presentation\Test.Web.Framework\obj\Debug\netcoreapp2.0\Test.Web.Framework.csproj.CoreCompileInputs.cache
+G:\NopCommerce\Test.Core\Presentation\Test.Web.Framework\obj\Debug\netcoreapp2.0\Test.Web.Framework.AssemblyInfoInputs.cache
+G:\NopCommerce\Test.Core\Presentation\Test.Web.Framework\obj\Debug\netcoreapp2.0\Test.Web.Framework.AssemblyInfo.cs
+G:\NopCommerce\Test.Core\Presentation\Test.Web.Framework\bin\Debug\netcoreapp2.0\Test.Core.dll
