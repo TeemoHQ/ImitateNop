@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "e60f9544af63c10a257532fbf2f1c69567df6e16"
+    "signature": "2430a87feec8fea8627eda3a016da2cad48beec4"
   },
   "compilationOptions": {},
   "targets": {
@@ -10,6 +10,7 @@
         "dependencies": {
           "AutoMapper": "6.2.2",
           "Autofac": "4.6.2",
+          "Autofac.Extensions.DependencyInjection": "4.2.0",
           "Microsoft.AspNetCore": "2.0.1",
           "Microsoft.AspNetCore.Authentication": "2.0.1",
           "Microsoft.AspNetCore.Authentication.Cookies": "2.0.1",
@@ -40,6 +41,15 @@
         },
         "runtime": {
           "lib/netstandard1.1/Autofac.dll": {}
+        }
+      },
+      "Autofac.Extensions.DependencyInjection/4.2.0": {
+        "dependencies": {
+          "Autofac": "4.6.2",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll": {}
         }
       },
       "AutoMapper/6.2.2": {
@@ -2156,6 +2166,13 @@
       "sha512": "sha512-wKI7F6+n45gqfq0T8FuB3hFzaCkuegiFo5in6uB1y2Ai9ZYcjue8yqk3yzyNEwBDS7AyvlTUGSoNovwpUuKqTw==",
       "path": "autofac/4.6.2",
       "hashPath": "autofac.4.6.2.nupkg.sha512"
+    },
+    "Autofac.Extensions.DependencyInjection/4.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cqBmgg9y7ahGbt7CPdvZFL6bA0PEwFyhIofUoUxEteZc+d0yNnE6ZvIWxHEM2F2HPJlC9SRnHWiZQq8r53moAw==",
+      "path": "autofac.extensions.dependencyinjection/4.2.0",
+      "hashPath": "autofac.extensions.dependencyinjection.4.2.0.nupkg.sha512"
     },
     "AutoMapper/6.2.2": {
       "type": "package",

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -10,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Test.Core.Common;
 using Test.Core.Configuration;
+using Test.Core.Infrastructure.DependencyManagement;
 using Test.Core.Infrastructure.Startup;
 using Test.Core.Infrastructure.TypeFinder;
 
@@ -18,13 +20,17 @@ namespace Test.Core.Infrastructure.Engine
     public class Engine:IEngine
     {
         private IServiceProvider _serviceProvider { get; set; }
-        public virtual IServiceProvider ServiceProvider => _serviceProvider;
+        public IServiceProvider ServiceProvider
+        {
+            get { return _serviceProvider; }
+            set { _serviceProvider = value; }
+        }
 
         /// <summary>
         /// Get IServiceProvider
         /// </summary>
         /// <returns>IServiceProvider</returns>
-        protected IServiceProvider GetServiceProvider()
+        public IServiceProvider GetServiceProvider()
         {
             var accessor = ServiceProvider.GetService<IHttpContextAccessor>();
             var context = accessor.HttpContext;
@@ -62,22 +68,49 @@ namespace Test.Core.Infrastructure.Engine
             return _serviceProvider;
         }
 
-        private void RegisterDependencies(TestConfig nopConfig, IServiceCollection services, WebAppTypeFinder typeFinder)
+        public void ConfigureRequestPipeline(IApplicationBuilder application)
         {
-            var containerBuilder=new ContainerBuilder();
+            //find startup configurations provided by other assemblies
+            var typeFinder = Resolve<ITypeFinder>();
+            var startupConfigurations = typeFinder.FindClassesOfType<ISelfStartup>();
+
+            //create and sort instances of startup configurations
+            var instances = startupConfigurations
+                .Where(startup => true) //ignore not installed plugins
+                .Select(startup => (ISelfStartup)Activator.CreateInstance(startup))
+                .OrderBy(startup => startup.Order);
+
+            //configure request pipeline
+            foreach (var instance in instances)
+                instance.Configure(application);
+        }
+
+        protected virtual IServiceProvider RegisterDependencies(TestConfig nopConfig, IServiceCollection services, WebAppTypeFinder typeFinder)
+        {
+            var containerBuilder = new ContainerBuilder();
+            var dependencyRegistrars = typeFinder.FindClassesOfType<IDependencyRegistrar>();
+
             //register engine
             containerBuilder.RegisterInstance(this).As<IEngine>().SingleInstance();
 
             //register type finder
             containerBuilder.RegisterInstance(typeFinder).As<ITypeFinder>().SingleInstance();
 
+            var instances = dependencyRegistrars
+                //.Where(dependencyRegistrar => PluginManager.FindPlugin(dependencyRegistrar).Return(plugin => plugin.Installed, true)) //ignore not installed plugins
+                .Select(dependencyRegistrar => (IDependencyRegistrar)Activator.CreateInstance(dependencyRegistrar))
+                .OrderBy(dependencyRegistrar => dependencyRegistrar.Order);
+            foreach (var dependencyRegistrar in instances)
+                dependencyRegistrar.Register(containerBuilder, typeFinder, nopConfig);
 
+            //populate Autofac container builder with the set of registered service descriptors
+            containerBuilder.Populate(services);
+
+            //create service provider
+            _serviceProvider = new AutofacServiceProvider(containerBuilder.Build());
+            return _serviceProvider;
         }
 
-        public void ConfigureRequestPipeline(IApplicationBuilder application)
-        {
-            throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Resolve dependency

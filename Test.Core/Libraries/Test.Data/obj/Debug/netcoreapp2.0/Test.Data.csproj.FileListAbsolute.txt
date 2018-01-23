@@ -1,0 +1,11 @@
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Data\bin\Debug\netcoreapp2.0\Test.Core.dll
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Data\obj\Debug\netcoreapp2.0\Test.Data.csprojResolveAssemblyReference.cache
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Data\obj\Debug\netcoreapp2.0\Test.Data.csproj.CoreCompileInputs.cache
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Data\obj\Debug\netcoreapp2.0\Test.Data.AssemblyInfoInputs.cache
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Data\obj\Debug\netcoreapp2.0\Test.Data.AssemblyInfo.cs
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Data\bin\Debug\netcoreapp2.0\Test.Data.deps.json
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Data\bin\Debug\netcoreapp2.0\Test.Data.dll
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Data\bin\Debug\netcoreapp2.0\Test.Data.pdb
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Data\bin\Debug\netcoreapp2.0\Test.Core.pdb
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Data\obj\Debug\netcoreapp2.0\Test.Data.dll
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Data\obj\Debug\netcoreapp2.0\Test.Data.pdb

@@ -9343,11 +9343,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "G:\\NopCommerce\\Test.Core\\Libraries\\Test.Core\\Test.Core.csproj",
+      "projectUniqueName": "G:\\NopCommerce\\ImitateNop\\Test.Core\\Libraries\\Test.Core\\Test.Core.csproj",
       "projectName": "Test.Core",
-      "projectPath": "G:\\NopCommerce\\Test.Core\\Libraries\\Test.Core\\Test.Core.csproj",
+      "projectPath": "G:\\NopCommerce\\ImitateNop\\Test.Core\\Libraries\\Test.Core\\Test.Core.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "G:\\NopCommerce\\Test.Core\\Libraries\\Test.Core\\obj\\",
+      "outputPath": "G:\\NopCommerce\\ImitateNop\\Test.Core\\Libraries\\Test.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

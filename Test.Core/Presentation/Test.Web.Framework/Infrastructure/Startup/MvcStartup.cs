@@ -11,7 +11,7 @@ namespace Test.Web.Framework.Infrastructure.Startup
     {
         public void ConfigureServices(IServiceCollection services, IConfigurationRoot configuration)
         {
-            //Do somthing
+            services.AddMvc();
         }
 
         public void Configure(IApplicationBuilder app)
@@ -36,6 +36,6 @@ namespace Test.Web.Framework.Infrastructure.Startup
             });
         }
 
-        public int Order { get; } = 1;
+        public int Order { get; } = 2;
     }
 }

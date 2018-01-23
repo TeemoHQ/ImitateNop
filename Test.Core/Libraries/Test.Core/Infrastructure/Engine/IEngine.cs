@@ -8,6 +8,7 @@ namespace Test.Core.Infrastructure.Engine
 {
     public interface IEngine
     {
+        IServiceProvider ServiceProvider { get; set; }
         /// <summary>
         /// Initialize engine
         /// </summary>

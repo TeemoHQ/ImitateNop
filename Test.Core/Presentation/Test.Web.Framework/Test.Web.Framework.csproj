@@ -11,6 +11,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Libraries\Test.Core\Test.Core.csproj" />
+    <ProjectReference Include="..\..\Libraries\Test.Data\Test.Data.csproj" />
+    <ProjectReference Include="..\..\Libraries\Test.Services\Test.Services.csproj" />
   </ItemGroup>
 
 </Project>

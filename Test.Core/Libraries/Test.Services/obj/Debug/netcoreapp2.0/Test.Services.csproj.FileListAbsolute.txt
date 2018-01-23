@@ -1,0 +1,13 @@
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Services\bin\Debug\netcoreapp2.0\Test.Services.deps.json
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Services\bin\Debug\netcoreapp2.0\Test.Services.dll
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Services\bin\Debug\netcoreapp2.0\Test.Services.pdb
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Services\bin\Debug\netcoreapp2.0\Test.Core.dll
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Services\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.dll
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Services\bin\Debug\netcoreapp2.0\Test.Core.pdb
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Services\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.xml
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Services\obj\Debug\netcoreapp2.0\Test.Services.csprojResolveAssemblyReference.cache
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Services\obj\Debug\netcoreapp2.0\Test.Services.csproj.CoreCompileInputs.cache
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Services\obj\Debug\netcoreapp2.0\Test.Services.AssemblyInfoInputs.cache
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Services\obj\Debug\netcoreapp2.0\Test.Services.AssemblyInfo.cs
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Services\obj\Debug\netcoreapp2.0\Test.Services.dll
+G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Services\obj\Debug\netcoreapp2.0\Test.Services.pdb
