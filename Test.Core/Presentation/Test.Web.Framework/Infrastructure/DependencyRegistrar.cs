@@ -22,14 +22,14 @@ namespace Test.Web.Framework.Infrastructure
             //help
             builder.RegisterType<CommonHelper>().SingleInstance();
 
-            //services
-            builder.RegisterType<StudentService>().InstancePerLifetimeScope();
-
             //data
-            builder.RegisterType<SelfDbContext>().As<DbContext>().InstancePerLifetimeScope();
+            builder.RegisterType<SelfDbContext>().As<IDbContext>().InstancePerLifetimeScope();
 
             //repositories
             builder.RegisterGeneric(typeof(EfRepository<>)).As(typeof(IRepository<>)).InstancePerLifetimeScope();
+
+            //services
+            builder.RegisterType<StudentService>().InstancePerLifetimeScope();
         }
 
         public int Order { get; }

@@ -6,6 +6,7 @@ using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Test.Core;
 using Test.Core.Domain;
+using Test.Data.Mapping;
 
 namespace Test.Data
 {
@@ -22,26 +23,8 @@ namespace Test.Data
         /// <param name="modelBuilder">Model builder</param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            var typesToRegister = Assembly.GetExecutingAssembly().GetTypes()
-                .Where(type => !string.IsNullOrEmpty(type.Namespace))
-                .Where(type => type.BaseType != null && type.BaseType.IsGenericType&&
-                               type.BaseType.GetGenericTypeDefinition() == typeof(SelfEntityTypeConfiguration<>));
-
-            //var a = Assembly.GetExecutingAssembly().GetTypes();
-            //var b = a.Where(type => !string.IsNullOrEmpty(type.Namespace));
-            //foreach (var type in b)
-            //{
-            //    var c1 = type.BaseType;
-            //    var c2 = type.BaseType.GetGenericTypeDefinition();
-            //    var c3 = typeof(SelfEntityTypeConfiguration<>);
-            //}
-
-
-            foreach (var type in typesToRegister)
-            {
-                modelBuilder.Entity(type);
-            }
-            //base.OnModelCreating(modelBuilder);
+            modelBuilder.AddEntityConfigurationsFromAssembly(GetType().Assembly);
+            base.OnModelCreating(modelBuilder);
         }
 
         public new DbSet<TEntity> Set<TEntity>() where TEntity : BaseEntity
