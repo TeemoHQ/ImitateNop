@@ -13,5 +13,3 @@ G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Core\obj\Debug\netcoreapp2.0\
 G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Core\obj\Debug\netcoreapp2.0\Test.Core.AssemblyInfo.cs
 G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Core\obj\Debug\netcoreapp2.0\Test.Core.dll
 G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Core\obj\Debug\netcoreapp2.0\Test.Core.pdb
-G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Core\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.dll
-G:\NopCommerce\ImitateNop\Test.Core\Libraries\Test.Core\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.xml
